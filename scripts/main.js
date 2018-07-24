@@ -20,17 +20,28 @@ var close = document.querySelector('.close-button');
 var bigImage = document.querySelector('.big-image');
 var title = document.querySelector('.title');
 var comments = document.querySelector('.comments');
+var left = document.querySelector('.arrow-left');
+var right = document.querySelector('.arrow-right');
 
 
 var closeClick = function() {
     lightBox.classList.remove("show-modal");
 };
 
-var nextImage = function(event) {
-    var index = Number(event.currentTarget.getAttribute('data-index'));
+var nextImage = function() {
+    var index = Number(bigImage.getAttribute('data-index'));
     var image = images[index + 1];
     bigImage.setAttribute('src', image.url);
     bigImage.setAttribute('data-index', index + 1);
+    title.textContent = image.caption;
+    comments.textContent = image.comments;
+};
+
+var previousImage = function() {
+    var index = Number(bigImage.getAttribute('data-index'));
+    var image = images[index - 1];
+    bigImage.setAttribute('src', image.url);
+    bigImage.setAttribute('data-index', index - 1);
     title.textContent = image.caption;
     comments.textContent = image.comments;
 };
@@ -51,7 +62,6 @@ var handleClick = function(event) {
 
     lightBox.classList.toggle("show-modal");
 
-    bigImage.addEventListener('click', nextImage);
 
     title.textContent = image.caption;
     comments.textContent = image.comments;
@@ -61,6 +71,8 @@ var handleClick = function(event) {
 };
 
 lightBox.addEventListener("click", windowOnClick);
+right.addEventListener('click', nextImage);
+left.addEventListener('click', previousImage);
 
 for (var index = 0; index < images.length; index++) {
 
