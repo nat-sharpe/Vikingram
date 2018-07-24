@@ -18,10 +18,6 @@ html, body {
     opacity: 1;
 }
 
-.big-image {
-    height: 100%;
-}
-
 li {
     list-style: none;
     width: 30em;
@@ -30,11 +26,11 @@ li {
     position: relative;
 }
 
-li:hover .thumbnail-box{
+li:hover .thumbnail-box {
     visibility: visible;
 }
 
-li:hover .thumbnail{
+li:hover .thumbnail {
     opacity: .5;
 }
 
@@ -99,6 +95,8 @@ main {
     margin: 0;
 }
 
+
+
 .modal {
     display: flex;
     justify-content: center;
@@ -108,21 +106,45 @@ main {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
-    transform: scale(1.1);
 }
 
 .modal-content {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.big-image {
     height: 100%;
-    width: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
 }
 
 .show-modal {
     opacity: 1;
     visibility: visible;
+    /* transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; */
 }
+
 
 
 

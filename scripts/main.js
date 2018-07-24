@@ -13,24 +13,36 @@ var images = [
 ];
 
 
-
 var container = document.querySelector('.image-list');
 var lightBox = document.querySelector('.modal');
 var popUp = document.querySelector('.modal-content');
+var close = document.querySelector('.close-button');
+var bigImage = document.querySelector('.big-image');
 
+var closeClick = function() {
+    lightBox.classList.toggle("show-modal");
+};
+
+var nextImage = function(event) {
+    var index = event.currentTarget.getAttribute('data-index');
+    var newIndex = parseInt(index) + 1;
+    var image = images[newIndex];
+    bigImage.setAttribute('src', image.url);
+};
 
 var handleClick = function(event) {
-    // console.log(event);
     event.preventDefault();
     var index = event.currentTarget.getAttribute('data-index')
     var image = images[index]
-    var bigImage = document.createElement('img');
-    newImage.classList.toggle("big-image");
     bigImage.setAttribute('src', image.url);
-    popUp.appendChild(bigImage);
-    lightBox.classList.add("show-modal");
+    bigImage.setAttribute('data-index', index);
 
+    lightBox.classList.toggle("show-modal");
+
+    close.addEventListener('click', closeClick);
+    bigImage.addEventListener('click', nextImage);
 };
+
 
 for (var index = 0; index < images.length; index++) {
 
@@ -58,14 +70,6 @@ for (var index = 0; index < images.length; index++) {
     listItem.appendChild(captionBox);
     container.appendChild(listItem);
 };
-
-// var image = document.querySelectorAll('img');
-
-// var handleCLick = function() {
-//     console.log('Ha, Ha, fooled you.');
-// };
-
-// image.addEventListener('click', handleCLick);
 
 
 
