@@ -18,10 +18,6 @@ html, body {
     opacity: 1;
 }
 
-.thumbnail:hover {
-    opacity: .5;
-}
-
 .big-image {
     height: 100%;
 }
@@ -31,15 +27,32 @@ li {
     width: 30em;
     height: 30em;
     padding: 1.2em;
+    position: relative;
+}
+
+li:hover .thumbnail-box{
+    visibility: visible;
+}
+
+li:hover .thumbnail{
+    opacity: .5;
+}
+
+.thumbnail-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .thumbnail-caption {
-    position: fixed;
-    visibility: hidden;
-}
-
-.thumbnail-caption:hover {
-    visibility: visible;
+    font-size: 2rem;
+    color: white;
 }
 
 

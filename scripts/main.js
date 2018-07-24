@@ -1,7 +1,7 @@
 
 
 var images = [
-    {caption: 'Homies', url: "https://pmcvariety.files.wordpress.com/2014/02/vikings-tv-review.jpg?w=1000&h=563&crop=1"},
+    {caption: 'Me and the gang', url: "https://pmcvariety.files.wordpress.com/2014/02/vikings-tv-review.jpg?w=1000&h=563&crop=1"},
     {caption: 'Cool ships', url: "https://prod-cdn-history-co-uk.s3.amazonaws.com/s3fs-public/vikings-main_0.jpg?jSru47BGLuEeljFBrRffvoPMkqfnyRzV"},
     {caption: 'Babe', url: "https://heavyeditorial.files.wordpress.com/2015/02/cast-lagertha.jpg?quality=65&strip=all&w=780"},
     {caption: 'Crazy friend with axes', url: "https://celebvogue.com/wp-content/uploads/2017/11/Vikings-Season-2-Floki-official-picture-vikings-tv-series-37651177-2655-3543-767x1024.jpg"},
@@ -28,25 +28,34 @@ var handleClick = function(event) {
     newImage.classList.toggle("big-image");
     bigImage.setAttribute('src', image.url);
     popUp.appendChild(bigImage);
-    lightBox.classList.toggle("show-modal");
+    lightBox.classList.add("show-modal");
 
 };
 
 for (var index = 0; index < images.length; index++) {
+
     var newImage = document.createElement('img');
-    newImage.classList.toggle("thumbnail");
     var image = images[index];
-    newImage.setAttribute('src', image.url);
-    newImage.setAttribute('data-index', index);
-    newImage.addEventListener('click', handleClick);
+
+
+    var captionBox = document.createElement('div');
+    captionBox.classList.add("thumbnail-box");
 
     var caption = document.createElement('p');
     caption.textContent = image.caption;
-    var imageAnchor = document.createElement('a');
+    caption.classList.add("thumbnail-caption");
+    captionBox.appendChild(caption);
+    captionBox.addEventListener('click', handleClick);
+    captionBox.setAttribute('data-index', index);
+
+    newImage.setAttribute('src', image.url);
+    newImage.classList.add("thumbnail");
+
+
     var listItem = document.createElement('li');
     
     listItem.appendChild(newImage);
-    listItem.appendChild(caption);
+    listItem.appendChild(captionBox);
     container.appendChild(listItem);
 };
 
