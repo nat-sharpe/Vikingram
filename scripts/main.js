@@ -26,14 +26,28 @@ var changeLightBoxImage = function(direction) {
     lightBoxImage.setAttribute('src', neighborImage.url);
     title.textContent = neighborImage.caption;
     comments.textContent = neighborImage.comments;
-    currentImageIndex = (i + direction);
+    currentImageIndex = i + direction;
 };
 
 var nextImage = function () {
-    changeLightBoxImage(1)
+    console.log(currentImageIndex);
+    if (currentImageIndex === (imagesList.length - 1)) {
+        currentImageIndex = 0;
+        changeLightBoxImage(0);
+    }
+    else {
+        changeLightBoxImage(1)
+    }
 };
 var previousImage = function () {
-    changeLightBoxImage(-1)
+    console.log(currentImageIndex);
+    if (currentImageIndex === 0) {
+        currentImageIndex = (imagesList.length - 1);
+        changeLightBoxImage(0);
+    }
+    else {
+        changeLightBoxImage(-1);
+    }
 };
 
 var clickCloseLightBox = function() {
@@ -46,17 +60,26 @@ var clickLightBoxBackground = function (event) {
     }
 };
 
+var arrowKeys = function (event) {
+    if (event.key === 'ArrowLeft') {
+        previousImage();
+    }
+    else if (event.key === 'ArrowRight') {
+        nextImage();
+    }
+}
+window.addEventListener('keydown', arrowKeys);
+
 lightBox.addEventListener("click", clickLightBoxBackground);
 arrowRight.addEventListener('click', nextImage);
 arrowLeft.addEventListener('click', previousImage);
 
 for (var i = 0; i < imagesList.length; i++) {
-
     (function() {
         var thumbnail = document.createElement('img');
         var image = imagesList[i];
-        var currentI = i;
         var thumbnailBox = document.createElement('div');
+        var currentI = i;
 
         var clickOpenLightBox = function() {
             lightBoxImage.setAttribute('src', image.url);
@@ -76,7 +99,6 @@ for (var i = 0; i < imagesList.length; i++) {
         thumbnailCaption.textContent = image.caption;
         thumbnailCaption.classList.add("thumbnail-caption");
         thumbnailBox.appendChild(thumbnailCaption);
-        thumbnailBox.addEventListener('click', clickOpenLightBox);
 
         thumbnail.setAttribute('src', image.url);
         thumbnail.classList.add("thumbnail");
@@ -84,6 +106,8 @@ for (var i = 0; i < imagesList.length; i++) {
 
         var listItem = document.createElement('li');
         listItem.classList.add("image-container");
+
+        listItem.addEventListener('click', clickOpenLightBox);
 
         listItem.appendChild(thumbnail);
         listItem.appendChild(thumbnailBox);
