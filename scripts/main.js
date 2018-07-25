@@ -1,4 +1,4 @@
-var images = [
+var imagesList = [
     {caption: 'Me and the gang', comments: 'Hanging out before the big battle is Wessex. Too much fun.', url: "https://pmcvariety.files.wordpress.com/2014/02/vikings-tv-review.jpg?w=1000&h=563&crop=1"},
     {caption: 'Cool ships', comments: 'So cool... Floki is a genius. Check out those keels!', url: "https://prod-cdn-history-co-uk.s3.amazonaws.com/s3fs-public/vikings-main_0.jpg?jSru47BGLuEeljFBrRffvoPMkqfnyRzV"},
     {caption: 'Babe', comments: 'What more can I say? ', url: "https://heavyeditorial.files.wordpress.com/2015/02/cast-lagertha.jpg?quality=65&strip=all&w=780"},
@@ -10,60 +10,56 @@ var images = [
     {caption: '#GoodOldDays', url: "https://resizing.flixster.com/JrRJCIaeXSfvvvThwlZu9xCveYg=/2304x1536/v1.dDsxNTQ3MTI7ajsxNzc3NjsxMjAwOzIzMDQ7MTUzNg"}
 ];
 
-
 var container = document.querySelector('.image-list');
 var lightBox = document.querySelector('.modal');
-var popUp = document.querySelector('.modal-content');
-var close = document.querySelector('.close-button');
-var bigImage = document.querySelector('.big-image');
+var lightBoxCloseButton = document.querySelector('.close-button');
+var lightBoxImage = document.querySelector('.big-image');
 var title = document.querySelector('.title');
 var comments = document.querySelector('.comments');
-var left = document.querySelector('.arrow-left');
-var right = document.querySelector('.arrow-right');
+var arrowLeft = document.querySelector('.arrow-left');
+var arrowRight = document.querySelector('.arrow-right');
 var currentImageIndex = 0;
 
+var changeLightBoxImage = function(direction) {
+    var i = currentImageIndex;
+    var neighborImage = imagesList[i + direction];
+    lightBoxImage.setAttribute('src', neighborImage.url);
+    title.textContent = neighborImage.caption;
+    comments.textContent = neighborImage.comments;
+    currentImageIndex = (i + direction);
+};
 
-var closeClick = function() {
+var nextImage = function () {
+    changeLightBoxImage(1)
+};
+var previousImage = function () {
+    changeLightBoxImage(-1)
+};
+
+var clickCloseLightBox = function() {
     lightBox.classList.remove("show-modal");
 };
 
-var changeImage = function(num) {
-    var i = currentImageIndex;
-    var image = images[i + num];
-    bigImage.setAttribute('src', image.url);
-    title.textContent = image.caption;
-    comments.textContent = image.comments;
-    currentImageIndex = (i + num);
-};
-
-
-var windowOnClick = function (event) {
+var clickLightBoxBackground = function (event) {
     if (event.target === lightBox) {
-        closeClick();
+        clickCloseLightBox();
     }
-}
-
-var next = function () {
-    changeImage(1)
-};
-var previous = function () {
-    changeImage(-1)
 };
 
-lightBox.addEventListener("click", windowOnClick);
-right.addEventListener('click', next);
-left.addEventListener('click', previous);
+lightBox.addEventListener("click", clickLightBoxBackground);
+arrowRight.addEventListener('click', nextImage);
+arrowLeft.addEventListener('click', previousImage);
 
-for (var i = 0; i < images.length; i++) {
+for (var i = 0; i < imagesList.length; i++) {
 
     (function() {
-        var newImage = document.createElement('img');
-        var image = images[i];
+        var thumbnail = document.createElement('img');
+        var image = imagesList[i];
         var currentI = i;
-        var captionBox = document.createElement('div');
+        var thumbnailBox = document.createElement('div');
 
-        var handleClick = function() {
-            bigImage.setAttribute('src', image.url);
+        var clickOpenLightBox = function() {
+            lightBoxImage.setAttribute('src', image.url);
         
             lightBox.classList.toggle("show-modal");
             title.textContent = image.caption;
@@ -71,25 +67,26 @@ for (var i = 0; i < images.length; i++) {
 
             currentImageIndex = currentI;
         
-            close.addEventListener('click', closeClick);
+            lightBoxCloseButton.addEventListener('click', clickCloseLightBox);
         };
 
-        captionBox.classList.add("thumbnail-box");
+        thumbnailBox.classList.add("thumbnail-box");
 
-        var caption = document.createElement('p');
-        caption.textContent = image.caption;
-        caption.classList.add("thumbnail-caption");
-        captionBox.appendChild(caption);
-        captionBox.addEventListener('click', handleClick);
+        var thumbnailCaption = document.createElement('p');
+        thumbnailCaption.textContent = image.caption;
+        thumbnailCaption.classList.add("thumbnail-caption");
+        thumbnailBox.appendChild(thumbnailCaption);
+        thumbnailBox.addEventListener('click', clickOpenLightBox);
 
-        newImage.setAttribute('src', image.url);
-        newImage.classList.add("thumbnail");
+        thumbnail.setAttribute('src', image.url);
+        thumbnail.classList.add("thumbnail");
 
 
         var listItem = document.createElement('li');
+        listItem.classList.add("image-container");
 
-        listItem.appendChild(newImage);
-        listItem.appendChild(captionBox);
+        listItem.appendChild(thumbnail);
+        listItem.appendChild(thumbnailBox);
         container.appendChild(listItem);
     })();
 };
