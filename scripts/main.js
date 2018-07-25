@@ -1,5 +1,3 @@
-
-
 var images = [
     {caption: 'Me and the gang', comments: 'Hanging out before the big battle is Wessex. Too much fun.', url: "https://pmcvariety.files.wordpress.com/2014/02/vikings-tv-review.jpg?w=1000&h=563&crop=1"},
     {caption: 'Cool ships', comments: 'So cool... Floki is a genius. Check out those keels!', url: "https://prod-cdn-history-co-uk.s3.amazonaws.com/s3fs-public/vikings-main_0.jpg?jSru47BGLuEeljFBrRffvoPMkqfnyRzV"},
@@ -22,83 +20,78 @@ var title = document.querySelector('.title');
 var comments = document.querySelector('.comments');
 var left = document.querySelector('.arrow-left');
 var right = document.querySelector('.arrow-right');
+var currentImageIndex = 0;
 
 
 var closeClick = function() {
     lightBox.classList.remove("show-modal");
 };
 
-var nextImage = function() {
-    var index = Number(bigImage.getAttribute('data-index'));
-    var image = images[index + 1];
+var changeImage = function(num) {
+    var i = currentImageIndex;
+    var image = images[i + num];
     bigImage.setAttribute('src', image.url);
-    bigImage.setAttribute('data-index', index + 1);
     title.textContent = image.caption;
     comments.textContent = image.comments;
+    currentImageIndex = (i + num);
 };
 
-var previousImage = function() {
-    var index = Number(bigImage.getAttribute('data-index'));
-    var image = images[index - 1];
-    bigImage.setAttribute('src', image.url);
-    bigImage.setAttribute('data-index', index - 1);
-    title.textContent = image.caption;
-    comments.textContent = image.comments;
-};
 
-function windowOnClick(event) {
-    console.log(event.target);
-    if (event.target === event.currentTarget) {
+var windowOnClick = function (event) {
+    if (event.target === lightBox) {
         closeClick();
     }
 }
 
-var handleClick = function(event) {
-    event.preventDefault();
-    var index = event.currentTarget.getAttribute('data-index')
-    var image = images[index]
-    bigImage.setAttribute('src', image.url);
-    bigImage.setAttribute('data-index', index);
-
-    lightBox.classList.toggle("show-modal");
-
-
-    title.textContent = image.caption;
-    comments.textContent = image.comments;
-
-    close.addEventListener('click', closeClick);
-
+var next = function () {
+    changeImage(1)
+};
+var previous = function () {
+    changeImage(-1)
 };
 
 lightBox.addEventListener("click", windowOnClick);
-right.addEventListener('click', nextImage);
-left.addEventListener('click', previousImage);
+right.addEventListener('click', next);
+left.addEventListener('click', previous);
 
-for (var index = 0; index < images.length; index++) {
+for (var i = 0; i < images.length; i++) {
 
-    var newImage = document.createElement('img');
-    var image = images[index];
+    (function() {
+        var newImage = document.createElement('img');
+        var image = images[i];
+        var currentI = i;
+        var captionBox = document.createElement('div');
+
+        var handleClick = function() {
+            bigImage.setAttribute('src', image.url);
+        
+            lightBox.classList.toggle("show-modal");
+            title.textContent = image.caption;
+            comments.textContent = image.comments;
+
+            currentImageIndex = currentI;
+        
+            close.addEventListener('click', closeClick);
+        };
+
+        captionBox.classList.add("thumbnail-box");
+
+        var caption = document.createElement('p');
+        caption.textContent = image.caption;
+        caption.classList.add("thumbnail-caption");
+        captionBox.appendChild(caption);
+        captionBox.addEventListener('click', handleClick);
+
+        newImage.setAttribute('src', image.url);
+        newImage.classList.add("thumbnail");
 
 
-    var captionBox = document.createElement('div');
-    captionBox.classList.add("thumbnail-box");
+        var listItem = document.createElement('li');
 
-    var caption = document.createElement('p');
-    caption.textContent = image.caption;
-    caption.classList.add("thumbnail-caption");
-    captionBox.appendChild(caption);
-    captionBox.addEventListener('click', handleClick);
-    captionBox.setAttribute('data-index', index);
-
-    newImage.setAttribute('src', image.url);
-    newImage.classList.add("thumbnail");
-
-
-    var listItem = document.createElement('li');
-    
-    listItem.appendChild(newImage);
-    listItem.appendChild(captionBox);
-    container.appendChild(listItem);
+        listItem.appendChild(newImage);
+        listItem.appendChild(captionBox);
+        container.appendChild(listItem);
+    })();
 };
 
 
