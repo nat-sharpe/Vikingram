@@ -52,29 +52,61 @@ html, body {
     color: white;
 }
 
-
-.header-box {
+.header {
     display: flex;
     justify-content: center;
-    height: 10em;
+    height: 20em;
     background-color: rgb(20, 20, 20);
-    padding: 10em;
+    padding: 0;
 }
 
-.nav {
+.header-content {
     width: 100em;
+    height: 100%;
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
 }
 
-h1 {
-    font-size: 7rem;
-    color:lightsteelblue;
+.profile {
+    display: flex;
+    color: white;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-image-box {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-image {
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+    border: solid;
+    border-color: steelblue;
+    border-radius: 100%;
+}
+
+.profile-text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-header {
+    display: flex;
+}
+
+.profile-data {
     margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
 .post-button {
@@ -144,23 +176,24 @@ main {
 .modal-text-box {
     background-color: white;
     height: 100%;
-    width: 10%;
+    width: 20rem;
     padding: 1rem;
     display: flex;
     flex-direction: column; 
     pointer-events: auto;
+    flex: 0 1 auto;
 }
 
 .modal-title {
-    width: 100%;
     color: black;
-    font-size: 3rem;
+    font-size: 2em;
+    overflow-wrap: break-word;
 }
 
 .modal-comments {
-    width: 100%;
     color: steelblue;
-    font-size: 2rem;
+    font-size: 1em;
+    overflow-wrap: break-word;
 }
 
 .arrow-left {
@@ -202,6 +235,11 @@ main {
     visibility: visible;
     /* transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; */
 }
+
+.hide-list {
+    visibility: hidden;
+}
+
 
 
 

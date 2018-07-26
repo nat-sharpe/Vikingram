@@ -85,10 +85,10 @@ var arrowKeys = function (event) {
 
 var toggleImages = function () {
     if (event.target === postButton) {
-        changeList(postList);
+        chooseList(postList);
     }
-    else {
-        changeList(taggedList);    
+    else if (event.target === taggedButton) {
+        chooseList(taggedList);    
     }
 };
 
@@ -96,12 +96,10 @@ modal.addEventListener("click", clickModalBackground);
 arrowRight.addEventListener('click', nextImage);
 arrowLeft.addEventListener('click', previousImage);
 window.addEventListener('keydown', arrowKeys);
-
 postButton.addEventListener('click', toggleImages);
 taggedButton.addEventListener('click', toggleImages);
 
-
-var changeList = function (whichList) {
+var chooseList = function (whichList) {
     var listDisplayed = document.createElement('ul');
 
     while (mainContent.firstChild) {
@@ -145,4 +143,4 @@ var changeList = function (whichList) {
     whichList.forEach(showList);
 }
 
-changeList(postList);
+chooseList(postList);
