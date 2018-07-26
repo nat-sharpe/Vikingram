@@ -1,4 +1,4 @@
-var imagesList = [
+var postList = [
     {caption: 'Me and the gang', comments: 'Hanging out before the big battle is Wessex. Too much fun.', url: "https://pmcvariety.files.wordpress.com/2014/02/vikings-tv-review.jpg?w=1000&h=563&crop=1"},
     {caption: 'Cool ships', comments: 'So cool... Floki is a genius. Check out those keels!', url: "https://prod-cdn-history-co-uk.s3.amazonaws.com/s3fs-public/vikings-main_0.jpg?jSru47BGLuEeljFBrRffvoPMkqfnyRzV"},
     {caption: 'Babe', comments: 'What more can I say? ', url: "https://heavyeditorial.files.wordpress.com/2015/02/cast-lagertha.jpg?quality=65&strip=all&w=780"},
@@ -10,53 +10,51 @@ var imagesList = [
     {caption: '#GoodOldDays', url: "https://resizing.flixster.com/JrRJCIaeXSfvvvThwlZu9xCveYg=/2304x1536/v1.dDsxNTQ3MTI7ajsxNzc3NjsxMjAwOzIzMDQ7MTUzNg"}
 ];
 
-var container = document.querySelector('.image-list');
-var lightBox = document.querySelector('.modal');
-var lightBoxCloseButton = document.querySelector('.close-button');
-var lightBoxImage = document.querySelector('.big-image');
-var title = document.querySelector('.title');
-var comments = document.querySelector('.comments');
+var thumbList = document.querySelector('.thumbnail-list');
+var modal = document.querySelector('.modal');
+var modalCloseButton = document.querySelector('.close-button');
+var modalImage = document.querySelector('.modal-image');
+var modalTitle = document.querySelector('.modal-title');
+var modalComments = document.querySelector('.modal-comments');
 var arrowLeft = document.querySelector('.arrow-left');
 var arrowRight = document.querySelector('.arrow-right');
 var currentImageIndex = 0;
 
-var changeLightBoxImage = function(direction) {
+var changeModalImage = function(direction) {
     var i = currentImageIndex;
-    var neighborImage = imagesList[i + direction];
-    lightBoxImage.setAttribute('src', neighborImage.url);
-    title.textContent = neighborImage.caption;
-    comments.textContent = neighborImage.comments;
+    var neighborImage = postList[i + direction];
+    modalImage.setAttribute('src', neighborImage.url);
+    modalTitle.textContent = neighborImage.caption;
+    modalComments.textContent = neighborImage.modalComments;
     currentImageIndex = i + direction;
 };
 
 var nextImage = function () {
-    console.log(currentImageIndex);
-    if (currentImageIndex === (imagesList.length - 1)) {
+    if (currentImageIndex === (postList.length - 1)) {
         currentImageIndex = 0;
-        changeLightBoxImage(0);
+        changeModalImage(0);
     }
     else {
-        changeLightBoxImage(1)
+        changeModalImage(1)
     }
 };
 var previousImage = function () {
-    console.log(currentImageIndex);
     if (currentImageIndex === 0) {
-        currentImageIndex = (imagesList.length - 1);
-        changeLightBoxImage(0);
+        currentImageIndex = (postList.length - 1);
+        changeModalImage(0);
     }
     else {
-        changeLightBoxImage(-1);
+        changeModalImage(-1);
     }
 };
 
-var clickCloseLightBox = function() {
-    lightBox.classList.remove("show-modal");
+var clickCloseModal = function() {
+    modal.classList.remove("show-modal");
 };
 
-var clickLightBoxBackground = function (event) {
-    if (event.target === lightBox) {
-        clickCloseLightBox();
+var clickModalBackground = function (event) {
+    if (event.target === modal) {
+        clickCloseModal();
     }
 };
 
@@ -70,51 +68,43 @@ var arrowKeys = function (event) {
 }
 window.addEventListener('keydown', arrowKeys);
 
-lightBox.addEventListener("click", clickLightBoxBackground);
+modal.addEventListener("click", clickModalBackground);
 arrowRight.addEventListener('click', nextImage);
 arrowLeft.addEventListener('click', previousImage);
 
-for (var i = 0; i < imagesList.length; i++) {
-    (function() {
-        var thumbnail = document.createElement('img');
-        var image = imagesList[i];
-        var thumbnailBox = document.createElement('div');
-        var currentI = i;
 
-        var clickOpenLightBox = function() {
-            lightBoxImage.setAttribute('src', image.url);
-        
-            lightBox.classList.toggle("show-modal");
-            title.textContent = image.caption;
-            comments.textContent = image.comments;
+var addNewImage = function(image, i) {
+    var thumbnail = document.createElement('li');
+    var thumbImage = document.createElement('img');
+    var thumbHover = document.createElement('div');
+    var thumbCaption = document.createElement('p');
+    var currentI = i;
 
-            currentImageIndex = currentI;
-        
-            lightBoxCloseButton.addEventListener('click', clickCloseLightBox);
-        };
+    thumbnail.classList.add("thumbnail");
 
-        thumbnailBox.classList.add("thumbnail-box");
+    thumbImage.setAttribute('src', image.url);
+    thumbImage.classList.add("thumb-image");
 
-        var thumbnailCaption = document.createElement('p');
-        thumbnailCaption.textContent = image.caption;
-        thumbnailCaption.classList.add("thumbnail-caption");
-        thumbnailBox.appendChild(thumbnailCaption);
+    thumbHover.classList.add("thumb-hover");
 
-        thumbnail.setAttribute('src', image.url);
-        thumbnail.classList.add("thumbnail");
+    thumbCaption.textContent = image.caption;
+    thumbCaption.classList.add("thumb-hover-caption");
 
+    thumbHover.appendChild(thumbCaption);
+    thumbnail.appendChild(thumbImage);
+    thumbnail.appendChild(thumbHover);
+    thumbList.appendChild(thumbnail);
 
-        var listItem = document.createElement('li');
-        listItem.classList.add("image-container");
-
-        listItem.addEventListener('click', clickOpenLightBox);
-
-        listItem.appendChild(thumbnail);
-        listItem.appendChild(thumbnailBox);
-        container.appendChild(listItem);
-    })();
+    var clickOpenModal = function() {
+        modalImage.setAttribute('src', image.url);
+        modal.classList.toggle("show-modal");
+        modalTitle.textContent = image.caption;
+        modalComments.textContent = image.comments;
+        modalCloseButton.addEventListener('click', clickCloseModal);
+        currentImageIndex = currentI;
+    };
+    thumbnail.addEventListener('click', clickOpenModal);
 };
 
-
-
+postList.forEach(addNewImage);
 

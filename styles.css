@@ -11,14 +11,14 @@ html, body {
     font-size: 10px;
 }
 
-.thumbnail {
+.thumb-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 1;
 }
 
-.image-container {
+.thumbnail {
     list-style: none;
     width: 30em;
     height: 30em;
@@ -26,15 +26,15 @@ html, body {
     position: relative;
 }
 
-.image-container:hover .thumbnail-box {
+.thumbnail:hover .thumb-hover {
     visibility: visible;
 }
 
-.image-container:hover .thumbnail {
+.thumbnail:hover .thumb-image {
     opacity: .5;
 }
 
-.thumbnail-box {
+.thumb-hover {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,13 +46,13 @@ html, body {
     align-items: center;
 }
 
-.thumbnail-caption {
+.thumb-hover-caption {
     font-size: 2rem;
     color: white;
 }
 
 
-.header-container {
+.header-box {
     display: flex;
     justify-content: center;
     height: 10em;
@@ -80,14 +80,14 @@ main {
 }
 
 
-.content {
+.main-content {
     display: flex;
     justify-content: center;
     width: 100em;
     margin-top: 5em;
 }
 
-.image-list {
+.thumbnail-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -116,33 +116,34 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 60%;
+    height: 50%;
     width: 70%;
     pointer-events: none;
 }
 
-.big-image {
+.modal-image {
     height: 100%;
+    max-width: 90%;
     pointer-events: auto;
 }
 
-.commentBox {
+.modal-text-box {
     background-color: white;
     height: 100%;
-    width: 25rem;
+    width: 10%;
     padding: 1rem;
     display: flex;
     flex-direction: column; 
     pointer-events: auto;
 }
 
-.title {
+.modal-title {
     width: 100%;
     color: black;
     font-size: 3rem;
 }
 
-.comments {
+.modal-comments {
     width: 100%;
     color: steelblue;
     font-size: 2rem;
