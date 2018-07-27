@@ -22,35 +22,40 @@ var taggedList = [
     {caption: 'New hairstyle', url: "https://cdn1.thr.com/sites/default/files/imagecache/gallery_landscape_887x500/2017/01/VikingsTVTravisFimmel_photofestH2017.jpg"}
 ];
 
-var mainContent = document.querySelector('.main-content');
-var postButton = document.querySelector('.post-button');
-var taggedButton = document.querySelector('.tagged-button');
-var thumbList = document.querySelector('.thumbnail-list');
-var modal = document.querySelector('.modal');
-var modalImage = document.querySelector('.modal-image');
-var modalTitle = document.querySelector('.modal-title');
-var modalComments = document.querySelector('.modal-comments');
-var modalCloseButton = document.querySelector('.close-button');
-var arrowLeft = document.querySelector('.arrow-left');
-var arrowRight = document.querySelector('.arrow-right');
+var mainContent = $('.main-content');
+var postButton = $('.post-button');
+var taggedButton = $('.tagged-button');
+var thumbList = $('.thumbnail-list');
+var modal = $('.modal');
+var modalImage = $('.modal-image');
+var modalTitle = $('.modal-title');
+var modalComments = $('.modal-comments');
+var modalCloseButton = $('.close-button');
+var arrowLeft = $('.arrow-left');
+var arrowRight = $('.arrow-right');
 var currentImageIndex = 0;
 
 var changeModalImage = function(direction) {
     var i = currentImageIndex;
     var neighborImage = postList[i + direction];
-    modalImage.setAttribute('src', neighborImage.url);
-    modalTitle.textContent = neighborImage.caption;
-    modalComments.textContent = neighborImage.modalComments;
+    modalImage.attr('src', neighborImage.url);
+    modalTitle.text(neighborImage.caption);
+    modalComments.text(neighborImage.modalComments);
     currentImageIndex = i + direction;
 };
 
 var clickCloseModal = function() {
-    modal.classList.remove("show-modal");
+    console.log('background clicked');
+    modal.removeClass("show-modal");
+
 };
 
 var clickModalBackground = function (event) {
-    if (event.target === modal) {
+    console.log($(event.target))
+    console.log(modal)
+    if (event.target === modal[0]) {
         clickCloseModal();
+
     }
 };
 
@@ -84,60 +89,60 @@ var arrowKeys = function (event) {
 }
 
 var toggleImages = function () {
-    if (event.target === postButton) {
+    if (event.target === postButton[0]) {
         chooseList(postList);
     }
-    else if (event.target === taggedButton) {
+    else if (event.target === taggedButton[0]) {
         chooseList(taggedList);    
     }
 };
 
-modal.addEventListener("click", clickModalBackground);
-arrowRight.addEventListener('click', nextImage);
-arrowLeft.addEventListener('click', previousImage);
-window.addEventListener('keydown', arrowKeys);
-postButton.addEventListener('click', toggleImages);
-taggedButton.addEventListener('click', toggleImages);
+modal.on('click', clickModalBackground);
+arrowRight.on('click', nextImage);
+arrowLeft.on('click', previousImage);
+$(window).on('keydown', arrowKeys);
+postButton.on('click', toggleImages);
+taggedButton.on('click', toggleImages);
 
 var chooseList = function (whichList) {
-    var listDisplayed = document.createElement('ul');
+    var listDisplayed = $('<ul>');
 
-    while (mainContent.firstChild) {
-        mainContent.removeChild(mainContent.firstChild);
-    }
+   
+    mainContent.empty(mainContent.children);
 
-    listDisplayed.classList.add('thumbnail-list');
-    mainContent.appendChild(listDisplayed);
+    console.log(mainContent)
+    listDisplayed.addClass('thumbnail-list');
+    mainContent.append(listDisplayed);
 
     var showList = function (image, i) {
-        var thumbnail = document.createElement('li');
-        var thumbImage = document.createElement('img');
-        var thumbHover = document.createElement('div');
-        var thumbCaption = document.createElement('p');
+        var thumbnail = $('<li>');
+        var thumbImage = $('<img>');
+        var thumbHover = $('<div>');
+        var thumbCaption = $('<p>');
         var currentI = i;
 
-        thumbnail.classList.add("thumbnail");
-        thumbImage.setAttribute('src', image.url);
-        thumbImage.classList.add("thumb-image");
-        thumbHover.classList.add("thumb-hover");
-        thumbCaption.textContent = image.caption;
-        thumbCaption.classList.add("thumb-hover-caption");
+        thumbnail.addClass("thumbnail");
+        thumbImage.attr('src', image.url);
+        thumbImage.addClass("thumb-image");
+        thumbHover.addClass("thumb-hover");
+        thumbCaption.text(image.caption);
+        thumbCaption.addClass("thumb-hover-caption");
 
-        thumbHover.appendChild(thumbCaption);
-        thumbnail.appendChild(thumbImage);
-        thumbnail.appendChild(thumbHover);
-        listDisplayed.appendChild(thumbnail);
+        thumbHover.append(thumbCaption);
+        thumbnail.append(thumbImage);
+        thumbnail.append(thumbHover);
+        listDisplayed.append(thumbnail);
 
         var clickOpenModal = function() {
-            modalImage.setAttribute('src', image.url);
-            modal.classList.add("show-modal");
-            modalTitle.textContent = image.caption;
-            modalComments.textContent = image.comments;
-            modalCloseButton.addEventListener('click', clickCloseModal);
+            modalImage.attr('src', image.url);
+            modal.addClass("show-modal");
+            modalTitle.text(image.caption);
+            modalComments.text(image.comments);
+            modalCloseButton.on('click', clickCloseModal);
             currentImageIndex = currentI;
         };
 
-        thumbnail.addEventListener('click', clickOpenModal);
+        thumbnail.on('click', clickOpenModal);
     };
 
     whichList.forEach(showList);
