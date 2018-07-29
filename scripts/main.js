@@ -45,17 +45,13 @@ var changeModalImage = function(direction) {
 };
 
 var clickCloseModal = function() {
-    console.log('background clicked');
     modal.removeClass("show-modal");
 
 };
 
 var clickModalBackground = function (event) {
-    console.log($(event.target))
-    console.log(modal)
     if (event.target === modal[0]) {
         clickCloseModal();
-
     }
 };
 
@@ -106,11 +102,7 @@ taggedButton.on('click', toggleImages);
 
 var chooseList = function (whichList) {
     var listDisplayed = $('<ul>');
-
-   
-    mainContent.empty(mainContent.children);
-
-    console.log(mainContent)
+    mainContent.empty(mainContent.children);   
     listDisplayed.addClass('thumbnail-list');
     mainContent.append(listDisplayed);
 

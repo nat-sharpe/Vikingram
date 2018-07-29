@@ -3,20 +3,122 @@
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     background-color: rgb(20, 20, 20);
 }
 
-.thumb-image {
+.header {
+    display: flex;
+    justify-content: center;
+    height: 30rem;
     width: 100%;
+    background-color: rgb(20, 20, 20);
+}
+
+.header-content {
+    width: 100em;
     height: 100%;
-    object-fit: cover;
-    opacity: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    color: lightskyblue;
+    font-size: 1.5em;
+    width: 100%;
+    height: 20rem;
+}
+
+.profile-image-box {
+    width: 30rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-image {
+    height: 20rem;
+    width: 20rem;
+    border: solid;
+    border-color: steelblue;
+    border-radius: 100%;
+}
+
+.profile-text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center; 
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-name {
+    margin: 0;
+}
+
+.follow-button {
+    margin-left: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.profile-likes {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.profile-data {
+    margin: 0;
+}
+
+.post-button {
+    margin: 2rem;
+    height: 3rem;
+    width: 6em;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.tagged-button {
+    margin: 1rem;
+    height: 3rem;
+    width: 6em;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100em;
+}
+
+.thumbnail-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .thumbnail {
@@ -25,6 +127,14 @@ html, body {
     height: 30em;
     padding: 1.2em;
     position: relative;
+    margin: 1rem;
+}
+
+.thumb-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
 }
 
 .thumbnail:hover .thumb-hover {
@@ -52,97 +162,6 @@ html, body {
     color: white;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    height: 20em;
-    background-color: rgb(20, 20, 20);
-    padding: 0;
-}
-
-.header-content {
-    width: 100em;
-    height: 100%;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-}
-
-.profile {
-    display: flex;
-    color: white;
-    font-size: 2em;
-    width: 100%;
-    height: 100%;
-}
-
-.profile-image-box {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.profile-image {
-    height: 20rem;
-    width: 20rem;
-    object-fit: cover;
-    border: solid;
-    border-color: steelblue;
-    border-radius: 100%;
-}
-
-.profile-text {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-header {
-    display: flex;
-}
-
-.profile-data {
-    margin: 0;
-}
-
-.post-button {
-    height: 2em;
-    width: 5em;
-    cursor: pointer;
-}
-
-.tagged-button {
-    height: 2em;
-    width: 5em;
-    cursor: pointer;
-}
-
-main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.main-content {
-    display: flex;
-    justify-content: center;
-    width: 100em;
-    margin: 5em;
-}
-
-.thumbnail-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-
 .modal {
     display: flex;
     justify-content: center;
@@ -152,7 +171,7 @@ main {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     visibility: hidden;
 }
@@ -214,10 +233,10 @@ main {
     pointer-events: auto;
 }
 
-/* .close-button {
+.close-button {
     position: absolute;
     top: 0;
-    left: 7rem;
+    right: 0;
     width: 3rem;
     line-height: 3rem;
     font-size: 2rem;
@@ -228,7 +247,7 @@ main {
 }
 .close-button:hover {
     background-color: darkgray;
-} */
+}
 
 .show-modal {
     opacity: 1;
