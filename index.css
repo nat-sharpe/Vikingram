@@ -60,10 +60,10 @@ html, body {
 .header {
     display: flex;
     justify-content: center;
-    height: 30rem;
+    height: 31rem;
     width: 100%;
     background-color: rgb(20, 20, 20);
-    margin-top: 10rem;  
+    margin-top: 9.5rem;  
 }
 
 .header-content {
@@ -112,7 +112,7 @@ html, body {
 .profile-header {
     display: flex;
     align-items: center;
-    margin-bottom: 1    rem;
+    margin-bottom: 1rem;
 }
 
 .profile-name {
@@ -131,8 +131,17 @@ html, body {
     margin: 0;
 }
 
+.line {
+    width: 100%;
+    border-style: solid;
+    border-width: .1rem;
+    border-color: rgb(30, 30, 30);
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
 .btn {
-    margin: 1rem;
+    margin: 1.2rem;
     margin-bottom: .5rem;
     margin-top: 0;
     height: 3rem;
@@ -156,8 +165,12 @@ html, body {
     background-color: steelblue;
 }
 
-.like-button {
-    margin: 0;
+.fake-button {
+    cursor: auto;
+}
+
+.fake-button:hover {
+    background-color: steelblue;
 }
 
 main {
@@ -268,7 +281,7 @@ main {
 
 .modal-user {
     display: flex;
-    color: darkslategrey;
+    color: rgb(10, 10, 10);
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;
@@ -282,7 +295,6 @@ main {
     height: 6rem;
     width: 6rem;
     border-radius: 100%;
-    background-color: lightsteelblue;
 }
 
 
@@ -292,14 +304,15 @@ main {
 }
 
 .modal-title {
-    color: rgb(20, 20, 20);
+    color: steelblue;
     font-size: 2em;
     overflow-wrap: break-word;
+    margin-top: 3rem;
     margin-bottom: 0;
 }
 
 .modal-comments {
-    color: darkslategrey;
+    color: rgb(10, 10, 10);
     font-size: 1.5em;
     overflow-wrap: break-word;
 }
