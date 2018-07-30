@@ -69,15 +69,6 @@ html, body {
     color: steelblue;
 }
 
-.follow-button {
-    margin-left: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    background-color: steelblue;
-    border-style: none;
-    border-radius: .5rem;
-}
 
 .profile-likes {
     margin-top: 0;
@@ -89,7 +80,7 @@ html, body {
     margin: 0;
 }
 
-.post-button {
+.btn {
     margin: 2rem;
     height: 3rem;
     width: 5em;
@@ -100,15 +91,17 @@ html, body {
     border-radius: .5rem;
 }
 
-.tagged-button {
-    margin: 1rem;
-    height: 3rem;
-    width: 5em;
-    cursor: pointer;
-    font-size: 1.5rem;
+.btn:hover {
+    background-color: lightsteelblue;
+}
+
+.btn-clicked {
+    opacity: .5;
+    cursor: auto;
+ }
+
+ .btn-clicked:hover {
     background-color: steelblue;
-    border-style: none;
-    border-radius: .5rem;
 }
 
 main {
@@ -199,7 +192,7 @@ main {
 
 .modal-image {
     height: 100%;
-    max-width: 90%;
+    max-width: 70%;
     pointer-events: auto;
 }
 
@@ -216,7 +209,7 @@ main {
 
 .modal-user {
     display: flex;
-    color: steelblue;
+    color: darkslategrey;
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;
@@ -246,43 +239,45 @@ main {
 }
 
 .modal-comments {
-    color: steelblue;
+    color: darkslategrey;
     font-size: 1.5em;
     overflow-wrap: break-word;
 }
 
-.arrow-left {
-    margin-right: auto;
-    font-size: 3rem;
+.arrow {
+    font-size: 5rem;
     padding: 1rem;
-    color: white;
+    color: lightsteelblue;
     cursor: pointer;
     pointer-events: auto;
 }
 
+.arrow:hover {
+    opacity: .6;
+}
+
+.arrow-left {
+    margin-right: auto;
+}
+
 .arrow-right {
     margin-left: auto;
-    font-size: 3rem;
-    padding: 1rem;
-    color: white;
-    cursor: pointer;
-    pointer-events: auto;
 }
 
 .close-button {
     position: absolute;
     top: 0;
     right: 0;
-    width: 3rem;
-    line-height: 3rem;
-    font-size: 2rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 3rem;
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
+    background-color: lightsteelblue;
 }
 .close-button:hover {
-    background-color: darkgray;
+    opacity: .6;
 }
 
 .show-modal {

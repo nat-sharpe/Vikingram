@@ -1,25 +1,25 @@
 var postList = [
-    {caption: 'My badass bro', comments: 'Hvars þú böl kannt, kveð þú þér bölvi at ok gef-at þínum fjándum frið.', url: "https://creatureofthewheel.files.wordpress.com/2014/01/vikings-clive-standen.jpg"},
-    {caption: 'Gotta love that keel', comments: 'Bú er betra, þótt lítit sé, halr er heima hverr; þótt tvær geitr eigi ok taugreftan sal, þat er þó betra en bæn.', url: "https://s1.1zoom.ru/big0/465/Vikings_(TV_series)_Ships_Viking_ships_513598_1280x854.jpg"},
-    {caption: 'Best. Wife. Ever.', comments: 'Fjölkunnigri konu skal-at-tu í faðmi sofa, svá at hon lyki þik liðum.', url: "https://heavyeditorial.files.wordpress.com/2015/02/cast-lagertha.jpg?quality=65&strip=all&w=780"},
-    {caption: "Rollo's bad day", comments: "Mörg er góð mær, ef görva kannar, hugbrigð við hali", url: "https://i1.wp.com/www.cgmagonline.com/wp-content/uploads/2014/11/Vikings-Season-2-Brothers-war-1.jpg?ssl=1"},
-    {caption: '#family', comments: "Vápnum sínum skal-a maðr velli á feti ganga framar", url: "https://i.pinimg.com/736x/c2/1e/dc/c21edc322f978ad3dd3dcfe7a1b8ae44--vikings-tv-series-vikings-tv-show.jpg"},
-    {caption: 'Battle-worn', comments: "At kveldi skal dag leyfa, konu, er brennd er, mæki, er reyndr er, mey, er gefin er, ís, er yfir kemr, öl, er drukkit er.", url: "https://cdna.artstation.com/p/assets/images/images/003/123/998/large/piotr-bieryt-screenshot029-copy.jpg?1469997592"},
-    {caption: 'What do the gods intend?', comments: "Ósnjallr maðr hyggsk munu ey lifa, ef hann við víg varask; en elli gefr hánum engi frið, þótt hánum geirar gefi.", url: "https://tojuzbylo.pl/sites/default/files/v4_01_05152015_jh_02484-727x530.jpg"}, 
-    {caption: "Femme fatale", comments: "Deyr fé, deyja frændr, deyr sjalfr it sama, ek veit einn, at aldrei deyr: dómr um dauðan hvern.", url: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/10/vikingos-temporada-5_1.jpg?itok=PV6g_vo0"},
-    {caption: 'My former boss', comments: "At kveldi skal dag leyfa, konu, er brennd er, mæki, er reyndr er, mey, er gefin er, ís, er yfir kemr, öl, er drukkit er.", url: "https://dawnsdressdiary.files.wordpress.com/2013/04/vikings3.jpg?w=640"}
+    {caption: 'ᛏᚢᛁᚱᚼᛅ', comments: "ᚦᛅᚱ ᚢᛅᛦ ᛘᚢᛏᛋᚢᚼᚾᛁᛦ ᛘᛅᛏᛋᛏᛦ ᚢᛘ ᚢᚱᚦᛁᚾ ᛏᚢᛁᚱᚼᛅ ᛅᛚᛦᛅ᛫ ᛁᚾ ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬ ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫ ᛏᚢᛁᚱᚼᛅᛦ᛫ ᚢᚱ ᛁᚬᚱᚦᚢ᛫ ᛋᛁᛘ ᛏᚢᚱᛁᚾ ᛋᛅᚼᚦᛁ᛬ ᚾᚢᛁ ᚢᚴ ᚾᛁᚦᛁ᛫ ᚾᚢᚱᚦᚱᛁ ᚢᚴ ᛋᚢᚦᚱᛁ᛫ ᚬᚢᛋᛏᚱᛁ ᚢᚴ ᚢᛁᛋᛏᚱᛁ᛫ ᛅᛚᚦᛁᚢᚠᛦ᛫ ᛏᚢᛅᛚᛁᚾ᛫ ᚾᛅᛦ ᚢᚴ ᚾᛅᛁᚾ᛫ ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᚠᚢᚱ᛫ ᛒᛅᚠᚢᚱ᛫ ᛒᚬᛒᚢᚱ᛫ ᚾᚢᚱᛁ᛫ ᚬᚾ ᚢᚴ ᚬᚾᛅᚱ᛫ ᛅᛁ᛫ ᛘᛁᚬᚦᚢᛁᛏᚾᛁᛦ᛬ ᚢᛅᛁᚼᛦ ᚢᚴ", url: "https://creatureofthewheel.files.wordpress.com/2014/01/vikings-clive-standen.jpg"},
+    {caption: 'ᛅᛚᛦᛅ᛫ ᛁᚾ', comments: 'ᚴᚬᛏᛅᛚᚠᛦ᛫ ᚢᛁᛏᛅᛚᚠᛦ᛫ ᚦᚱᛅᛁᚾ᛫ ᚦᛁᚴᛦ ᚢᚴ ᚦᚢᚱᛁᚾ᛫ ᚦᚱᚢᛦ᛫ ᛚᛁᛏᛦ ᚢᚴ ᚢᛁᛏᛦ᛫ ᚾᛅᛦ ᚢᚴ ᚾᚢᚱᛅᚦᛦ᛫ ᚾᚢ ᚼᛁᚠᛁ ᛁᚴ ᛏᚢᛁᚱᚼᛅ᛫', url: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2017/10/vikingos-temporada-5_1.jpg?itok=PV6g_vo0"},
+    {caption: 'ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬', comments: 'ᛅᚱᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛬ ᛘᛅᛚ ᛁᛦ ᛏᚢᛁᚱᚼᛅ ᛁ ᛏᚢᛅᛚᛁᚾᛋ ᛚᛁᚦᛁ ᛚᛁᚢᚾᛅ ᚴᛁᛏᚢᛘ ᛏᛁᛚ ᛚᚢᚠᛅᚱᛋ ᛏᛁᛚᛁᚬ᛫ ᚦᛅᛁᛦ ᛁᚱ ᛋᚢᛏᚢ ᚠᚱᚬ ᛋᛅᛚᛅᛦ ᛋᛏᛅᛁᚾᛁ ᚬᚢᛦᚢᚬᚴᛅ ᛋᛁᚬᛏ ᛏᛁᛚ ᛁᚬᚱᚢᚢᛅᛚᚬ᛬ ᚦᛅᚱ ᚢᛅᚱ ᛏᚱᚬᚢᛒᚾᛁᛦ ᚢᚴ ᛏᚢᛚᚼᚦᚱᛅᛋᛁᛦ᛫ ᚼᛅᚱ᛫ ᚼᚬᚢᚼᛋᛒᚢᚱᛁ᛫ ᚼᛚᛁᚢᚬᚴᛦ᛫', url: "https://s1.1zoom.ru/big0/465/Vikings_(TV_series)_Ships_Viking_ships_513598_1280x854.jpg"},
+    {caption: "ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ", comments: "ᚴᛚᚢᛁᚾ᛫ ᛏᚢᚱᛁ᛫ ᚢᚱᛁ᛫ ᛏᚢᚠᛦ᛫ ᚬᛏᚢᛅᚱᛁ᛫ ᛋᚴᛁᚱᚢᛁᛦ᛫ ᚢᛁᚱᚢᛁᛦ᛫ ᛋᚴᛅᚠᛁᚦᛦ᛫ ᛅᛁ᛬ ᛅᛚᚠᛦ ᚢᚴ ᚢᚴᚢᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛫ ᚠᛁᛅᛚᛅᚱ ᚢᚴ ᚠᚱᚢᛋᛏᛁ᛫ ᚠᛁᚾᛦ ᚢᚴ ᚴᛁᚾᛅᚱ᛬ ᚦᛅᛏ ᛘᚢᚾ ᚢᛒᛁ᛫ ᛘᛁᚦᚬᚾ ᚬᛚᛏ ᛚᛁᚠᛁᛦ᛫ ᛚᚬᚴᚾᛁᚦᛁᛅ ᛏᛅᛚ ᛚᚢᚠᛅᚱᛋ ᚼᛅᚠᚬᛏ᛬", url: "https://i1.wp.com/www.cgmagonline.com/wp-content/uploads/2014/11/Vikings-Season-2-Brothers-war-1.jpg?ssl=1"},
+    {caption: 'ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫', comments: "ᚦᛅᚱ ᚢᛅᛦ ᛘᚢᛏᛋᚢᚼᚾᛁᛦ ᛘᛅᛏᛋᛏᛦ ᚢᛘ ᚢᚱᚦᛁᚾ ᛏᚢᛁᚱᚼᛅ ᛅᛚᛦᛅ᛫ ᛁᚾ ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬ ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫ ᛏᚢᛁᚱᚼᛅᛦ᛫ ᚢᚱ ᛁᚬᚱᚦᚢ᛫ ᛋᛁᛘ ᛏᚢᚱᛁᚾ ᛋᛅᚼᚦᛁ᛬ ᚾᚢᛁ ᚢᚴ ᚾᛁᚦᛁ᛫ ᚾᚢᚱᚦᚱᛁ ᚢᚴ ᛋᚢᚦᚱᛁ᛫ ᚬᚢᛋᛏᚱᛁ ᚢᚴ ᚢᛁᛋᛏᚱᛁ᛫", url: "https://cdna.artstation.com/p/assets/images/images/003/123/998/large/piotr-bieryt-screenshot029-copy.jpg?1469997592"},
+    {caption: 'ᛏᚢᛁᚱᚼᛅᛦ᛫', comments: "ᛏᛅᛁᚾ᛫ ᛒᛁᛚᛁᚴᛦ᛫ ᛒᚱᚢᚾᛁ᛫ ᛒᛁᛚᛏᛦ ᚢᚴ ᛒᚢᚱᛁ᛫ ᚠᚱᛅᛦ᛫ ᚼᚢᚱᚾᛒᚢᚱᛁ᛫ ᚠᚱᛅᚼᛦ ᚢᚴ ᛚᚢᚾᛁ᛫ ᚬᚢᛦᚢᚬᚴᛦ᛫ ᛁᛅᚱᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛬ ᛘᛅᛚ ᛁᛦ ᛏᚢᛁᚱᚼᛅ ᛁ ᛏᚢᛅᛚᛁᚾᛋ ᛚᛁᚦᛁ ᛚᛁᚢᚾᛅ ᚴᛁᛏᚢᛘ ᛏᛁᛚ ᛚᚢᚠᛅᚱᛋ ᛏᛁᛚᛁᚬ᛫ ᚦᛅᛁᛦ ᛁᚱ ᛋᚢᛏᚢ ᚠᚱᚬ ᛋᛅᛚᛅᛦ ᛋᛏᛅᛁᚾᛁ ᚬᚢᛦᚢᚬᚴᛅ ᛋᛁᚬᛏ ᛏᛁᛚ ᛁᚬᚱᚢᚢᛅᛚᚬ᛬ ᚦᛅᚱ ᚢᛅᚱ ᛏᚱᚬᚢᛒᚾᛁᛦ ᚢᚴ ᛏᚢᛚᚼᚦᚱᛅᛋᛁᛦ᛫ ᚼᛅᚱ᛫ ᚼᚬᚢᚼᛋᛒᚢᚱᛁ᛫ ᚼᛚᛁᚢᚬᚴᛦ᛫ ᚴᛚᚢᛁᚾ", url: "https://heavyeditorial.files.wordpress.com/2015/02/cast-lagertha.jpg?quality=65&strip=all&w=780"},
+    {caption: 'ᚢᚱ ᛁᚬᚱᚦᚢ', comments: "ᛅᚱᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛬ ᛘᛅᛚ ᛁᛦ ᛏᚢᛁᚱᚼᛅ ᛁ ᛏᚢᛅᛚᛁᚾᛋ ᛚᛁᚦᛁ ᛚᛁᚢᚾᛅ ᚴᛁᛏᚢᛘ ᛏᛁᛚ ᛚᚢᚠᛅᚱᛋ ᛏᛁᛚᛁᚬ᛫ ᚦᛅᛁᛦ ᛁᚱ ᛋᚢᛏᚢ ᚠᚱᚬ ᛋᛅᛚᛅᛦ ᛋᛏᛅᛁᚾᛁ ᚬᚢᛦᚢᚬᚴᛅ ᛋᛁᚬᛏ ᛏᛁᛚ ᛁᚬᚱᚢᚢᛅᛚᚬ᛬ ᚦᛅᚱ ᚢᛅᚱ ᛏᚱᚬᚢᛒᚾᛁᛦ ᚢᚴ ᛏᚢᛚᚼᚦᚱᛅᛋᛁᛦ᛫ ᚼᛅᚱ᛫ ᚼᚬᚢᚼᛋᛒᚢᚱᛁ᛫ ᚼᛚᛁᚢᚬᚴᛦ᛫'", url: "https://tojuzbylo.pl/sites/default/files/v4_01_05152015_jh_02484-727x530.jpg"}, 
+    {caption: "ᛋᛁᛘ ᛏᚢᚱᛁᚾ", comments: "ᛏᛅᛁᚾ᛫ ᛒᛁᛚᛁᚴᛦ᛫ ᛒᚱᚢᚾᛁ᛫ ᛒᛁᛚᛏᛦ ᚢᚴ ᛒᚢᚱᛁ᛫ ᚠᚱᛅᛦ᛫ ᚼᚢᚱᚾᛒᚢᚱᛁ᛫ ᚠᚱᛅᚼᛦ ᚢᚴ ᛚᚢᚾᛁ᛫ ᚬᚢᛦᚢᚬᚴᛦ᛫ ᛁᛅᚱᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛬ ᛘᛅᛚ", url: "https://i.pinimg.com/736x/c2/1e/dc/c21edc322f978ad3dd3dcfe7a1b8ae44--vikings-tv-series-vikings-tv-show.jpg"},
+    {caption: 'ᛋᛅᚼᚦᛁ᛬ ᚾᚢᛁ', comments: "ᚦᛅᚱ ᚢᛅᛦ ᛘᚢᛏᛋᚢᚼᚾᛁᛦ ᛘᛅᛏᛋᛏᛦ ᚢᛘ ᚢᚱᚦᛁᚾ ᛏᚢᛁᚱᚼᛅ ᛅᛚᛦᛅ᛫ ᛁᚾ ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬ ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫ ᛏᚢᛁᚱᚼᛅᛦ᛫ ᚢᚱ ᛁᚬᚱᚦᚢ᛫ ᛋᛁᛘ ᛏᚢᚱᛁᚾ ᛋᛅᚼᚦᛁ᛬ ᚾᚢᛁ ᚢᚴ ᚾᛁᚦᛁ᛫ ᚾᚢᚱᚦᚱᛁ ᚢᚴ ᛋᚢᚦᚱᛁ᛫ ᚬᚢᛋᛏᚱᛁ ᚢᚴ ᚢᛁᛋᛏᚱᛁ᛫ ᛅᛚᚦᛁᚢᚠᛦ᛫ ᛏᚢᛅᛚᛁᚾ᛫ ᚾᛅᛦ ᚢᚴ ᚾᛅᛁᚾ᛫ ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᚠᚢᚱ᛫ ᛒᛅᚠᚢᚱ᛫ ᛒᚬᛒᚢᚱ᛫ ᚾᚢᚱᛁ᛫ ᚬᚾ ᚢᚴ ᚬᚾᛅᚱ᛫ ᛅᛁ᛫ ᛘᛁᚬᚦᚢᛁᛏᚾᛁᛦ᛬ ᚢᛅᛁᚼᛦ ᚢᚴ ᚴᚬᛏᛅᛚᚠᛦ᛫ ᚢᛁᛏᛅᛚᚠᛦ᛫ ᚦᚱᛅᛁᚾ᛫ ᚦᛁᚴᛦ ᚢᚴ ᚦᚢᚱᛁᚾ᛫ ᚦᚱᚢᛦ᛫ ᛚᛁᛏᛦ ᚢᚴ ᚢᛁᛏᛦ᛫ ᚾᛅᛦ ᚢᚴ ᚾᚢᚱᛅᚦᛦ᛫ ᚾᚢ ᚼᛁᚠᛁ ᛁᚴ ᛏᚢᛁᚱᚼᛅ᛫", url: "https://dawnsdressdiary.files.wordpress.com/2013/04/vikings3.jpg?w=640"}
 ];
 
 var taggedList = [
-    {caption: 'How it all started', comments: 'Hvars þú böl kannt, kveð þú þér bölvi at ok gef-at þínum fjándum frið.', url: "http://www.journal.com.ph/media/k2/items/cache/afa65e44694e85c27c262d4077b83508_XL.jpg"},
-    {caption: 'Tough love', comments: 'Hvars þú böl kannt, kveð þú þér bölvi at ok gef-at þínum fjándum frið.', url: "https://vikingmoviesinfo.files.wordpress.com/2014/01/vikings-s2-01.jpg"},
-    {caption: "Hard day's work", comments: "At kveldi skal dag leyfa, konu, er brennd er, mæki, er reyndr er, mey, er gefin er, ís, er yfir kemr, öl, er drukkit er.", url: "https://vikingsnewsandrecaps.files.wordpress.com/2015/02/v-s03e01-5.jpg"},
-    {caption: 'Senior photo',comments: "Deyr fé, deyja frændr, deyr sjalfr it sama, ek veit einn, at aldrei deyr: dómr um dauðan hvern.", url: "https://cdn.shopify.com/s/files/1/1565/1123/files/ragnar_vikings_grimfrost_large.jpg?v=1481295399"},
-    {caption: 'Feeling smug', comments: "Ósnjallr maðr hyggsk munu ey lifa, ef hann við víg varask; en elli gefr hánum engi frið, þótt hánum geirar gefi.", url: "https://i.pinimg.com/originals/3c/1e/f1/3c1ef159cff58486ab984f8063333b79.jpg"},
-    {caption: 'Feeling nervous', comments: "At kveldi skal dag leyfa, konu, er brennd er, mæki, er reyndr er, mey, er gefin er, ís, er yfir kemr, öl, er drukkit er.", url: "https://vignette.wikia.nocookie.net/beyond-good-and-evil-burning-wheel/images/4/4f/Alexander_Frisk.jpg/revision/latest?cb=20131009031750"},
-    {caption: 'Nothing like a cold one', comments: "Mörg er góð mær, ef görva kannar, hugbrigð við hali", url: "https://i.ytimg.com/vi/qgTAajmpNiA/hqdefault.jpg"},  
-    {caption: "The English coin", comments: "Deyr fé, deyja frændr, deyr sjalfr it sama, ek veit einn, at aldrei deyr: dómr um dauðan hvern.", url: "http://www.patriciabracewell.com/wp-content/uploads/2016/12/4.12.Coin_-1.jpg"}, 
-    {caption: 'Flirting with danger', comments: 'Bú er betra, þótt lítit sé, halr er heima hverr; þótt tvær geitr eigi ok taugreftan sal, þat er þó betra en bæn.', url: "https://i.pinimg.com/originals/81/62/1b/81621b0da89aa4502c3e0c444d80e43d.jpg"}
+    {caption: 'ᚢᚴ ᚾᛁᚦᛁ᛫', comments: 'ᚾᚢᚱᛅᚦᛦ᛫ ᚾᚢ ᚼᛁᚠᛁ ᛁᚴ ᛏᚢᛁᚱᚼᛅ᛫ ᚱᛁᚼᛁᚾ ᚢᚴ ᚱᛅᚦᛋᚢᛁᚦᛦ᛫ ᚱᛁᛏ ᚢᛘ ᛏᛅᛚᚦᚬ᛬ ᚠᛁᛚᛁ᛫ ᚴᛁᛚᛁ᛫ ᚠᚢᛏᛁᚾ᛫ ᚾᛅᛚᛁ᛫ ᚼᛁᛒᛏᛁ᛫ ᚢᛁᛚᛁ᛫ ᚼᚬᚾᛅᚱ᛫ ᛋᚢᛁᚢᚱ᛫ ᚾᛅᛦ ᚢᚴ ᚾᛅᛁᚾ᛫ ', url: "http://www.journal.com.ph/media/k2/items/cache/afa65e44694e85c27c262d4077b83508_XL.jpg"},
+    {caption: 'ᚢᚱᚦᚱᛁ', comments: 'ᚱᛁᛏ ᚢᛘ ᛏᛅᛚᚦᚬ᛬ ᚠᛁᛚᛁ᛫ ᚴᛁᛚᛁ᛫ ᚠᚢᛏᛁᚾ᛫ ᚾᛅᛚᛁ᛫ ᚼᛁᛒᛏᛁ᛫ ᚢᛁᛚᛁ᛫ ᚼᚬᚾᛅᚱ᛫ ᛋᚢᛁᚢᚱ᛫ ᚾᛅᛦ ᚢᚴ ᚾᛅᛁᚾ᛫ ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᛚᛁᚴᛦ᛫ ᛒᚱᚢᚾᛁ᛫ ᛒᛁᛚᛏᛦ ᚢᚴ ᛒᚢᚱᛁ᛫ ᚠᚱᛅᛦ᛫ ᚼᚢᚱᚾᛒᚢᚱᛁ᛫ ᚠᚱᛅᚼᛦ ᚢᚴ ᛚᚢᚾᛁ᛫ ᚬᚢᛦᚢᚬᚴᛦ᛫ ᛁᛅᚱᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛬ ᛘᛅᛚ ᛁᛦ ᛏᚢᛁᚱᚼᛅ ᛁ ᛏᚢᛅᛚᛁᚾᛋ ᛚᛁᚦᛁ ᛚᛁᚢᚾᛅ ᚴᛁᛏᚢᛘ ᛏᛁᛚ ᛚᚢᚠᛅᚱᛋ ᛏᛁᛚᛁᚬ᛫ ᚦᛅᛁᛦ ᛁᚱ ᛋᚢᛏᚢ ᚠᚱᚬ ᛋᛅᛚᛅᛦ ', url: "https://vikingmoviesinfo.files.wordpress.com/2014/01/vikings-s2-01.jpg"},
+    {caption: "ᚢᚴ", comments: " ᚾᛅᛦ ᚢᚴ ᚾᛅᛁᚾ᛫ ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᚠᚢᚱ᛫ ᛒᛅᚠᚢᚱ᛫ ᛒᚬᛒᚢᚱ᛫ ᚾᚢᚱᛁ᛫ ᚬᚾ ᚢᚴ ᚬᚾᛅᚱ᛫ ᛅᛁ᛫ ᛘᛁᚬᚦᚢᛁᛏᚾᛁᛦ᛬ ᚢᛅᛁᚼᛦ ᚢᚴ ᚴᚬᛏᛅᛚᚠᛦ᛫ ᚢᛁᛏᛅᛚᚠᛦ᛫ ᚦᚱᛅᛁᚾ᛫ ᚦᛁᚴᛦ ᚢᚴ ᚦᚢᚱᛁᚾ᛫ ᚦᚱᚢᛦ᛫ ᛚᛁᛏᛦ ᚢᚴ ᚢᛁᛏᛦ᛫ ᚾᛅᛦ ᚢᚴ ᚾᚢᚱᛅᚦᛦ᛫ ᚾᚢ ᚼᛁᚠᛁ ᛁᚴ ᛏᚢᛁᚱᚼᛅ᛫ ᚱᛁᚼᛁᚾ ᚢᚴ ᚱᛅᚦᛋᚢᛁᚦᛦ᛫", url: "https://vikingsnewsandrecaps.files.wordpress.com/2015/02/v-s03e01-5.jpg"},
+    {caption: 'ᛋᚢᚦᚱᛁ᛫',comments: "ᚦᛅᚱ ᚢᛅᛦ ᛘᚢᛏᛋᚢᚼᚾᛁᛦ ᛘᛅᛏᛋᛏᛦ ᚢᛘ ᚢᚱᚦᛁᚾ ᛏᚢᛁᚱᚼᛅ ᛅᛚᛦᛅ᛫ ᛁᚾ ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬ ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫᛫", url: "https://cdn.shopify.com/s/files/1/1565/1123/files/ragnar_vikings_grimfrost_large.jpg?v=1481295399"},
+    {caption: 'ᚬᚢᛋᛏᚱᛁ', comments: "ᛋᛏᛅᛁᚾᛁ ᚬᚢᛦᚢᚬᚴᛅ ᛋᛁᚬᛏ ᛏᛁᛚ ᛁᚬᚱᚢᚢᛅᛚᚬ᛬ ᚦᛅᚱ ᚢᛅᚱ ᛏᚱᚬᚢᛒᚾᛁᛦ ᚢᚴ ᛏᚢᛚᚼᚦᚱᛅᛋᛁᛦ᛫ ᚼᛅᚱ᛫ ᚼᚬᚢᚼᛋᛒᚢᚱᛁ᛫ ᚼᛚᛁᚢᚬᚴᛦ᛫ ᚴᛚᚢᛁᚾ᛫ ᛏᚢᚱᛁ᛫ ᚢᚱᛁ᛫ ᛏᚢᚠᛦ᛫ ᚬᛏᚢᛅᚱᛁ᛫ ᛋᚴᛁᚱᚢᛁᛦ᛫ ᚢᛁᚱᚢᛁᛦ᛫ ᛋᚴᛅᚠᛁᚦᛦ᛫ ᛅᛁ᛬ ᛅᛚᚠᛦ ᚢᚴ ᚢᚴᚢᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛫ ᚠᛁᛅᛚᛅᚱ ᚢᚴ ᚠᚱᚢᛋᛏᛁ᛫ ᚠᛁᚾᛦ ᚢᚴ ᚴᛁᚾᛅᚱ᛬ ᚦᛅᛏ ᛘᚢᚾ ᚢᛒᛁ᛫ ᛘᛁᚦᚬᚾ ᚬᛚᛏ ᛚᛁᚠᛁᛦ᛫ ᛚᚬᚴᚾᛁᚦᛁᛅ ᛏᛅᛚ ᛚᚢᚠᛅᚱᛋ ᚼᛅᚠᚬᛏ᛬", url: "https://i.pinimg.com/originals/3c/1e/f1/3c1ef159cff58486ab984f8063333b79.jpg"},
+    {caption: 'ᛘᚬᚾᛚᛁᚴᚬᚾ', comments: "ᚢᚴ ᚾᛅᛁᚾ᛫ ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᚠᚢᚱ᛫ ᛒᛅᚠᚢᚱ᛫ ᛒᚬᛒᚢᚱ᛫ ᚾᚢᚱᛁ᛫ ᚬᚾ ᚢᚴ ᚬᚾᛅᚱ᛫ ᛅᛁ᛫ ᛘᛁᚬᚦᚢᛁᛏᚾᛁᛦ᛬ ᚢᛅᛁᚼᛦ ᚢᚴ ᚴᚬᛏᛅᛚᚠᛦ᛫ ᚢᛁᛏᛅᛚᚠᛦ᛫ ᚦᚱᛅᛁᚾ᛫ ᚦᛁᚴᛦ ᚢᚴ ᚦᚢᚱᛁᚾ᛫ ᚦᚱᚢᛦ᛫ ᛚᛁᛏᛦ ᚢᚴ ᚢᛁᛏᛦ᛫ ᚾᛅᛦ ᚢᚴ", url: "https://vignette.wikia.nocookie.net/beyond-good-and-evil-burning-wheel/images/4/4f/Alexander_Frisk.jpg/revision/latest?cb=20131009031750"},
+    {caption: 'ᛘᚬᚱᚼ', comments: "ᚦᛅᚱ ᚢᛅᛦ ᛘᚢᛏᛋᚢᚼᚾᛁᛦ ᛘᛅᛏᛋᛏᛦ ᚢᛘ ᚢᚱᚦᛁᚾ ᛏᚢᛁᚱᚼᛅ ᛅᛚᛦᛅ᛫ ᛁᚾ ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬ ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫ ᛏᚢᛁᚱᚼᛅᛦ᛫ ᚢᚱ ᛁᚬᚱᚦᚢ᛫ ᛋᛁᛘ ᛏᚢᚱᛁᚾ ᛋᛅᚼᚦᛁ᛬ ᚾᚢᛁ ᚢᚴ ᚾᛁᚦᛁ᛫ ᚾᚢᚱᚦᚱᛁ ᚢᚴ ᛋᚢᚦᚱᛁ᛫ ᚬᚢᛋᛏᚱᛁ ᚢᚴ ᚢᛁᛋᛏᚱᛁ᛫ ᛅᛚᚦᛁᚢᚠᛦ᛫ ᛏᚢᛅᛚᛁᚾ᛫ ᚾᛅᛦ ", url: "https://i.ytimg.com/vi/qgTAajmpNiA/hqdefault.jpg"},  
+    {caption: "ᚢᛘ ᚴᚢᚱᚦᚢ᛫", comments: "ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᛚᛁᚴᛦ᛫ ᛒᚱᚢᚾᛁ᛫ ᛒᛁᛚᛏᛦ ᚢᚴ ᛒᚢᚱᛁ᛫ ᚠᚱᛅᛦ᛫ ᚼᚢᚱᚾᛒᚢᚱᛁ᛫ ᚠᚱᛅᚼᛦ ᚢᚴ ᛚᚢᚾᛁ᛫ ᚬᚢᛦᚢᚬᚴᛦ᛫ ᛁᛅᚱᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛬ ᛘᛅᛚ ᛁᛦ ᛏᚢᛁᚱᚼᛅ ᛁ ᛏᚢᛅᛚᛁᚾᛋ ᛚᛁᚦᛁ ᛚᛁᚢᚾᛅ ᚴᛁᛏᚢᛘ ᛏᛁᛚ ᛚᚢᚠᛅᚱᛋ ᛏᛁᛚᛁᚬ᛫ ᚦᛅᛁᛦ ᛁᚱ ᛋᚢᛏᚢ ᚠᚱᚬ ᛋᛅᛚᛅᛦ ᛋᛏᛅᛁᚾᛁ ", url: "http://www.patriciabracewell.com/wp-content/uploads/2016/12/4.12.Coin_-1.jpg"}, 
+    {caption: 'ᚬᚾᛅᚱ ᛁᚬᚱᚦᚢ', comments: 'ᚬᚢᛦᚢᚬᚴᛅ ᛋᛁᚬᛏ ᛏᛁᛚ ᛁᚬᚱᚢᚢᛅᛚᚬ᛬ ᚦᛅᚱ ᚢᛅᚱ ᛏᚱᚬᚢᛒᚾᛁᛦ ᚢᚴ ᛏᚢᛚᚼᚦᚱᛅᛋᛁᛦ᛫ ᚼᛅᚱ᛫ ᚼᚬᚢᚼᛋᛒᚢᚱᛁ᛫ ᚼᛚᛁᚢᚬᚴᛦ᛫ ᚴᛚᚢᛁᚾ᛫ ᛏᚢᚱᛁ᛫ ᚢᚱᛁ᛫ ᛏᚢᚠᛦ᛫ ᚬᛏᚢᛅᚱᛁ᛫ ᛋᚴᛁᚱᚢᛁᛦ᛫ ᚢᛁᚱᚢᛁᛦ᛫ ᛋᚴᛅᚠᛁᚦᛦ᛫ ᛅᛁ᛬ ᛅᛚᚠᛦ ᚢᚴ ᚢᚴᚢᛁ᛫ ᛅᛁᚴᛁᚾᛋᚴᛁᛅᛚᛏᛁ᛫ ᚠᛁᛅᛚᛅᚱ ᚢᚴ ᚠᚱᚢᛋᛏᛁ᛫ ᚠᛁᚾᛦ ᚢᚴ ᚴᛁᚾᛅᚱ᛬ ᚦᛅᛏ ᛘᚢᚾ ᚢᛒᛁ᛫ ᛘᛁᚦᚬᚾ ᚬᛚᛏ ᛚᛁᚠᛁᛦ᛫ ᛚᚬᚴᚾᛁᚦᛁᛅ ᛏᛅᛚ ᛚᚢᚠᛅᚱᛋ ᚼᛅᚠᚬᛏ᛬.', url: "https://i.pinimg.com/originals/81/62/1b/81621b0da89aa4502c3e0c444d80e43d.jpg"}
 ];
 var body = $('body');
 var mainContent = $('.main-content');
@@ -89,9 +89,13 @@ var arrowKeys = function (event) {
 var toggleImages = function () {
     if (event.target === postButton[0]) {
         currentList = postList;
+        postButton.addClass("btn-clicked");
+        taggedButton.removeClass("btn-clicked");
     }
     else if (event.target === taggedButton[0]) {
         currentList = taggedList;
+        taggedButton.addClass("btn-clicked");
+        postButton.removeClass("btn-clicked");
     }
     chooseList(currentList);    
 
