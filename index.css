@@ -11,7 +11,7 @@ html, body {
 .header {
     display: flex;
     justify-content: center;
-    height: 30rem;
+    height: 35rem;
     width: 100%;
     background-color: rgb(20, 20, 20);
 }
@@ -27,10 +27,11 @@ html, body {
 
 .profile {
     display: flex;
-    color: lightskyblue;
+    color:lightsteelblue;
     font-size: 1.5em;
     width: 100%;
     height: 20rem;
+    margin-bottom: 2rem;
 }
 
 .profile-image-box {
@@ -45,8 +46,6 @@ html, body {
 .profile-image {
     height: 20rem;
     width: 20rem;
-    border: solid;
-    border-color: steelblue;
     border-radius: 100%;
 }
 
@@ -56,6 +55,7 @@ html, body {
     flex-direction: column;
     padding: 1rem;
     justify-content: center; 
+    
 }
 
 .profile-header {
@@ -66,6 +66,7 @@ html, body {
 
 .profile-name {
     margin: 0;
+    color: steelblue;
 }
 
 .follow-button {
@@ -73,6 +74,9 @@ html, body {
     height: 3rem;
     font-size: 1.5rem;
     cursor: pointer;
+    background-color: steelblue;
+    border-style: none;
+    border-radius: .5rem;
 }
 
 .profile-likes {
@@ -88,17 +92,23 @@ html, body {
 .post-button {
     margin: 2rem;
     height: 3rem;
-    width: 6em;
+    width: 5em;
     cursor: pointer;
     font-size: 1.5rem;
+    background-color: steelblue;
+    border-style: none;
+    border-radius: .5rem;
 }
 
 .tagged-button {
     margin: 1rem;
     height: 3rem;
-    width: 6em;
+    width: 5em;
     cursor: pointer;
     font-size: 1.5rem;
+    background-color: steelblue;
+    border-style: none;
+    border-radius: .5rem;
 }
 
 main {
@@ -142,7 +152,7 @@ main {
 }
 
 .thumbnail:hover .thumb-image {
-    opacity: .5;
+    opacity: .3;
 }
 
 .thumb-hover {
@@ -159,7 +169,8 @@ main {
 
 .thumb-hover-caption {
     font-size: 2rem;
-    color: white;
+    color: lightsteelblue;
+
 }
 
 .modal {
@@ -181,8 +192,8 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 50%;
-    width: 70%;
+    height: 70%;
+    width: 90%;
     pointer-events: none;
 }
 
@@ -193,31 +204,56 @@ main {
 }
 
 .modal-text-box {
-    background-color: white;
+    background-color: lightsteelblue;
     height: 100%;
     width: 20rem;
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column; 
     pointer-events: auto;
     flex: 0 1 auto;
 }
 
+.modal-user {
+    display: flex;
+    color: steelblue;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-user-image {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+}
+
+
+.modal-user-name{
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
 .modal-title {
-    color: black;
+    color: rgb(20, 20, 20);
     font-size: 2em;
     overflow-wrap: break-word;
+    margin-bottom: 0;
 }
 
 .modal-comments {
     color: steelblue;
-    font-size: 1em;
+    font-size: 1.5em;
     overflow-wrap: break-word;
 }
 
 .arrow-left {
     margin-right: auto;
-    font-size: 8rem;
+    font-size: 3rem;
     padding: 1rem;
     color: white;
     cursor: pointer;
@@ -226,7 +262,7 @@ main {
 
 .arrow-right {
     margin-left: auto;
-    font-size: 8rem;
+    font-size: 3rem;
     padding: 1rem;
     color: white;
     cursor: pointer;
@@ -258,10 +294,6 @@ main {
 .hide-list {
     visibility: hidden;
 }
-
-
-
-
 
 
 
