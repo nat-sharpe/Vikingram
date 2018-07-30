@@ -227,8 +227,8 @@ main {
 }
 
 .modal-user-image {
-    height: 5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 6rem;
     border-radius: 100%;
 }
 
@@ -289,6 +289,12 @@ main {
     opacity: 1;
     visibility: visible;
     /* transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; */
+}
+
+.stop-scrolling {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
 }
 
 .hide-list {
