@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background-color: rgb(20, 20, 20);
+    margin: 0; 
+    padding: .5rem;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 6rem;
+    z-index: 777;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+    border-bottom-style: solid;
+    border-bottom-width: .2rem;
+    border-bottom-color: rgb(35, 35, 35)
+}
+
+.nav-content {
+    width: 91.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:lightsteelblue;
+    font-size: 1.5em;
+}
+
+
+.nav-image {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: steelblue;
+    border-width: .2rem;
+    background-color: steelblue;
+    transition: 2s linear all;
+}
+
+.nav-image:hover {
+    transform: rotate(180deg);
+}
+
+
+.search {
+    background-color: lightsteelblue;
+    width: 20rem;
+    height: 2.5rem;
+    opacity: .8;
+    font-size: 1.5rem;
+}
+
+.spacer {
+    width: 16rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 31em;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    margin-top: 10.8rem;  
+}
+
+.header-content {
+    width: 91.7rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    color:lightsteelblue;
+    font-size: 1.5em;
+    width: 100%;
+    height: 20rem;
+}
+
+.profile-image-box {
+    width: 26rem;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-image {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+    opacity: .8;
+    transition: all 1s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(2);
+}
+
+.profile-text {
+    width: 70%;
+    margin-left: 5rem;
+        display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center; 
+    
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    margin: 0;
+    color: steelblue;
+}
+
+
+.profile-likes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.profile-data {
+    margin: 0;
+}
+
+.line {
+    width: 100%;
+    border-style: solid;
+    border-width: .1rem;
+    border-color: rgb(30, 30, 30);
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+.btn {
+    margin: 1.2rem;
+    margin-bottom: .5rem;
+    margin-top: 0;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: steelblue;
+    border-style: none;
+    border-radius: .5rem;
+}
+
+.btn:hover {
+    background-color: lightsteelblue;
+}
+
+.btn-clicked {
+    opacity: .5;
+    cursor: auto;
+ }
+
+ .btn-clicked:hover {
+    background-color: steelblue;
+}
+
+.fake-button {
+    cursor: auto;
+}
+
+.fake-button:hover {
+    background-color: steelblue;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100em;
+    margin: 0;
+}
+
+.thumbnail-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.thumbnail {
+    list-style: none;
+    width: 30rem;
+    height: 30rem;
+    padding: 1.2rem;
+    position: relative;
+    margin: 1rem;
+}
+
+.thumb-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.thumbnail:hover .thumb-hover {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.thumbnail:hover .thumb-image {
+    opacity: .3;
+}
+
+.thumb-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumb-hover-caption {
+    font-size: 2rem;
+    color: lightsteelblue;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 888;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70%;
+    width: 90%;
+    pointer-events: none;
+}
+
+.modal-image {
+    height: 100%;
+    max-width: 70%;
+    pointer-events: auto;
+}
+
+.modal-text-box {
+    background-color: lightsteelblue;
+    height: 100%;
+    width: 20rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column; 
+    pointer-events: auto;
+}
+
+.modal-user {
+    display: flex;
+    color: rgb(10, 10, 10);
+    font-size: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-user-image {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+}
+
+
+.modal-user-name{
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.modal-title {
+    color: steelblue;
+    font-size: 2em;
+    overflow-wrap: break-word;
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+.modal-comments {
+    color: rgb(10, 10, 10);
+    font-size: 1.5em;
+    overflow-wrap: break-word;
+    overflow: scroll;
+}
+
+.arrow {
+    font-size: 5rem;
+    padding: 1rem;
+    color: lightsteelblue;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.arrow:hover {
+    opacity: .6;
+}
+
+.arrow-left {
+    margin-right: auto;
+}
+
+.arrow-right {
+    margin-left: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 4rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightsteelblue;
+}
+
+.close-button:hover {
+    opacity: .6;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.stop-scrolling {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+.hide-list {
+    visibility: hidden;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+
+

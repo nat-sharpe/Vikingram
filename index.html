@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Retrogram</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ᚾᚢᛋᛏᚼᚴᚱᚼᛦ</title>
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/viking-symbols/128/4-512.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="nav">
+        <div class="nav-content">
+            <img src="https://cdn0.iconfinder.com/data/icons/viking-symbols/128/4-512.png" alt="" class="nav-image">
+            <h1 class="profile-name">ᚾᚢᛋᛏᚼᚴᚱᚼᛦ</h1>
+            <div class="spacer"></div>
+            <input type="text" class="search">
+            <div class="spacer"></div>
+            <button class="btn fake-button">ᚢᛅᛦ</button>
+            <p class="profile-data">ᛒᛁᚠᚢᚱ</p>
+        </div>
+    </div>
     <div class="header">
         <div class="header-content">
             <div class="profile">
@@ -16,17 +28,18 @@
                 </div>
                 <div class="profile-text">
                     <div class="profile-header">
-                        <h1 class="profile-name">Ragnar Lothbrok</h1>
-                        <button class="follow-button">Follow Me</button>
+                        <h1 class="profile-name">ᚱᛅᛦᚢᛅᚱ ᛫ ᛚᚼᛏᚴᚦᚱᚼᚠ</h1>
+                        <button class="btn fake-button">ᛘᛅᛏᛋᛏᛦ</button>
                     </div>
-                    <p class="profile-data">2330 likes    400 followers   765 following</p>
-                    <h3 class="profile-data">Ragnar</h1>
-                    <p class="profile-data">Odin sacrificed his eye to gain knowledge. I would sacrifice much more.</p>
+                    <p class="profile-likes"> ᚢᛘᚼ  ᛫᛫᛫ ᚢᚱᚦᛁᚾ ᛫᛫᛫     ᛏᚢᛁᚱᚼᛅᛅᛚᛦᛅ</p>
+                    <h3 class="profile-data">ᚱᛅᛦᚢᛅᚱ</h1>
+                    <p class="profile-data">ᛏᚢᚱᛁᚾ ᚬᚾᛅᚱ᛬ ᚦᛅᛁᛦ ᛘᚬᚾᛚᛁᚴᚬᚾ ᛘᚬᚱᚼ ᚢᛘ ᚴᚢᚱᚦᚢ᛫ ᛏᚢᛁᚱᚼᛅᛦ᛫ ᚢᚱ ᛁᚬᚱᚦᚢ᛫ ᛋᛁᛘ ᛏᚢᚱᛁᚾ ᛋᛅᚼᚦᛁ᛬ ᚾᚢᛁ ᚢᚴ ᚾᛁᚦᛁ᛫ ᚾᚢᚱᚦᚱᛁ ᚢᚴ ᛋᚢᚦᚱᛁ᛫ ᚬᚢᛋᛏᚱᛁ ᚢᚴ ᚢᛁᛋᛏᚱᛁ᛫ ᛅᛚᚦᛁᚢᚠᛦ᛫ ᛏᚢᛅᛚᛁᚾ᛫ ᚾᛅᛦ ᚢᚴ ᚾᛅᛁᚾ᛫ ᚾᛁᛒᛁᚴᛦ᛫ ᛏᛅᛁᚾ᛫ ᛒᛁᚠᚢᚱ᛫</p>
                 </div>
             </div>
+            <hr class="line"></hr>
             <div>
-                <button class="post-button">Posts</button>
-                <button class="tagged-button">Tagged</button>
+                <button class="btn post-button btn-clicked">ᛒᚬᛒᚢᚱ</button>
+                <button class="btn tagged-button">ᚴᚢᚱᚦᚢ᛫</button>
             </div>
         </div>
     </div>
@@ -35,17 +48,29 @@
         </div>
     </main>
     <div class="modal">
+        <span class="close-button">&times;</span>
         <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <p class="arrow-left">&lt;</p>
+            <p class="arrow arrow-left">&lt;</p>
                 <img src="" alt="" class="modal-image">
                 <div class="modal-text-box">
+                    <div class="modal-user">
+                        <div class="modal-user-image">
+                            <img src="https://www.menshairstylestoday.com/wp-content/uploads/2017/04/Travis-Fimmel-Hairstyle.jpg" alt="" class="modal-user-image">  
+                        </div>        
+                        <h1 class="modal-user-name">ᚱᛅᛦᚢᛅᚱ ᛚᚼᛏᚴᚦᚱᚼᚠ</h1>
+                    </div>
                     <p class="modal-title">title</p>
                     <p class="modal-comments">comments</p>
                 </div>
-            <p class="arrow-right">&gt;</p>
+            <p class="arrow arrow-right">&gt;</p>
         </div>
     </div>
+    <div class="footer">
+        <audio controls>
+            <source src="vikings.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
