@@ -17,7 +17,7 @@ html, body {
     padding: 1rem;
     width: 100%;
     height: 6rem;
-    z-index: 999;
+    z-index: 777;
     background-color: rgb(25, 25, 25);
     display: flex;
     justify-content: center;
@@ -35,6 +35,7 @@ html, body {
     font-size: 1.5em;
 }
 
+
 .nav-image {
     height: 4rem;
     width: 4rem;
@@ -43,7 +44,13 @@ html, body {
     border-color: steelblue;
     border-width: .2rem;
     background-color: steelblue;
+    transition: 2s linear all;
 }
+
+.nav-image:hover {
+    transform: rotate(180deg);
+}
+
 
 .search {
     background-color: lightsteelblue;
@@ -60,10 +67,10 @@ html, body {
 .header {
     display: flex;
     justify-content: center;
-    height: 31rem;
+    height: 31em;
     width: 100%;
     background-color: rgb(20, 20, 20);
-    margin-top: 9.5rem;  
+    margin-top: 10.8rem;  
 }
 
 .header-content {
@@ -89,7 +96,6 @@ html, body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
 }
 
 .profile-image {
@@ -97,6 +103,11 @@ html, body {
     width: 20rem;
     border-radius: 100%;
     opacity: .8;
+    transition: all 1s ease-in-out;
+}
+
+.profile-image:hover {
+    transform: scale(2);
 }
 
 .profile-text {
@@ -235,7 +246,6 @@ main {
 .thumb-hover-caption {
     font-size: 2rem;
     color: lightsteelblue;
-
 }
 
 .modal {
@@ -243,6 +253,7 @@ main {
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 888;
     top: 0;
     left: 0;
     height: 100%;
@@ -276,7 +287,6 @@ main {
     display: flex;
     flex-direction: column; 
     pointer-events: auto;
-    flex: 0 1 auto;
 }
 
 .modal-user {
@@ -315,6 +325,7 @@ main {
     color: rgb(10, 10, 10);
     font-size: 1.5em;
     overflow-wrap: break-word;
+    overflow: scroll;
 }
 
 .arrow {
@@ -357,7 +368,6 @@ main {
 .show-modal {
     opacity: 1;
     visibility: visible;
-    /* transition: opacity 1s 0s; */
 }
 
 .stop-scrolling {
@@ -368,6 +378,12 @@ main {
 
 .hide-list {
     visibility: hidden;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
 }
 
 
